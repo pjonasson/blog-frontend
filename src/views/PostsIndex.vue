@@ -4,6 +4,7 @@
     <div v-for="post in posts" v-bind:key="post.id">
       <h4>
         {{ post.title }}
+        <router-link to="/posts/1">Show Post</router-link>
       </h4>
     </div>
   </div>
