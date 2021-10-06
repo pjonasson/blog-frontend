@@ -7,6 +7,10 @@
       |
       <router-link to="/test">Test</router-link>
       |
+      <router-link to="/posts">Blog Posts</router-link>
+      |
+      <router-link to="/posts/new">New Blog Post</router-link>
+      |
       <router-link to="/signup">Signup</router-link>
       |
       <router-link to="/login">Login</router-link>
