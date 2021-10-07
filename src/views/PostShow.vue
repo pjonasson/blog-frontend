@@ -6,6 +6,8 @@
     <router-link v-bind:to="`/posts/${post.id}/edit`">Edit Post</router-link>
     |
     <router-link to="/posts">Back to all recipes</router-link>
+    |
+    <button v-on:click="destroyPost(post)">Delete Post</button>
   </div>
 </template>
 
@@ -27,6 +29,12 @@ export default {
       axios.get("/posts/" + this.$route.params.id).then((response) => {
         this.post = response.data;
         console.log(this.post);
+      });
+    },
+    destroyPost: function (post) {
+      axios.delete("http://localhost:3000/posts/" + post.id).then((response) => {
+        console.log("Success", response.data);
+        this.$router.push("/posts");
       });
     },
   },
